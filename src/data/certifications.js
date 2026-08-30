@@ -1,5 +1,12 @@
 const certifications = [
   {
+  id: "c-programming-iamneo",
+  name: "C Programming",
+  issuer: "iamneo",
+  year: "2026",
+  certificateUrl: "/certificates/c-programming-iamneo.pdf",
+  },
+  {
     id: "intro-data-science",
     name: "Introduction to Data Science",
     issuer: "Cisco Networking Academy",
