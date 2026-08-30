@@ -47,7 +47,7 @@ const projects = [
       "Low-cost and portable IoT design",
     ],
 
-    image: "public/projects/accident-detection.jpeg",
+    image: "/projects/accident-detection.jpeg",
 
     github:
       "https://github.com/ipratyushkumar/smart-accident-detection",
