@@ -17,7 +17,7 @@ const certifications = [
   {
     id: "intro-ai-ml",
     name: "Introduction to Artificial Intelligence and Machine Learning",
-    issuer: "Board Infinity",
+    issuer: "Infosys Springboard",
     year: "Completed",
     certificateUrl: "/certificates/introduction-ai-ml.pdf",
   },
