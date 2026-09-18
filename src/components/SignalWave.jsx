@@ -1,8 +1,10 @@
-// Signature hero element: a steady signal line that spikes once and
-// recovers — a quiet nod to the vibration-sensor / accident-alert theme
-// that anchors this portfolio's flagship project, rendered as ambient
-// background art rather than a literal chart.
+// Minimal signal-wave decoration for the hero section.
+// Inspired by the vibration sensor used in the accident-detection project.
+
 export default function SignalWave({ className = "" }) {
+  const wavePath =
+    "M0 80 H240 L260 30 L280 130 L300 60 L320 80 H800";
+
   return (
     <svg
       viewBox="0 0 800 160"
@@ -11,16 +13,20 @@ export default function SignalWave({ className = "" }) {
       aria-hidden="true"
       preserveAspectRatio="none"
     >
+      {/* Subtle background signal */}
       <path
-        d="M0 80 H240 L260 30 L280 130 L300 60 L320 80 H800"
-        stroke="#2E8A80"
+        d={wavePath}
+        stroke="#CBD5E1"
         strokeWidth="1.5"
-        opacity="0.5"
+        opacity="0.7"
       />
+
+      {/* Main blue signal */}
       <path
-        d="M0 80 H240 L260 30 L280 130 L300 60 L320 80 H800"
-        stroke="#4FD1C5"
+        d={wavePath}
+        stroke="#2563EB"
         strokeWidth="1.5"
+        opacity="0.65"
         className="animate-pulse-line"
         style={{
           strokeDasharray: 900,

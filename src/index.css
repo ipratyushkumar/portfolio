@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,20 +8,28 @@
   * {
     @apply border-base-line;
   }
+
   html {
     scroll-behavior: smooth;
   }
+
   body {
     @apply bg-base text-ink font-body antialiased;
   }
-  h1, h2, h3, h4 {
+
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply font-display text-ink;
   }
+
   ::selection {
-    @apply bg-signal/30 text-ink;
+    @apply bg-signal/20 text-ink;
   }
+
   :focus-visible {
-    outline: 2px solid #4FD1C5;
+    outline: 2px solid #2563eb;
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -31,26 +39,36 @@
   .section {
     @apply mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10 py-20 sm:py-24;
   }
+
   .eyebrow {
     @apply font-mono text-xs tracking-[0.2em] uppercase text-signal;
   }
+
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-medium
-           transition-all duration-200 focus-visible:outline-signal disabled:pointer-events-none disabled:opacity-50;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3
+      text-sm font-medium transition-all duration-200
+      disabled:pointer-events-none disabled:opacity-50;
   }
+
   .btn-primary {
-    @apply btn bg-signal text-base hover:bg-signal-bright active:scale-[0.98];
+    @apply btn bg-ink text-base hover:bg-signal active:scale-[0.98];
   }
+
   .btn-secondary {
-    @apply btn border border-base-line text-ink hover:border-signal-dim hover:text-signal-bright active:scale-[0.98];
+    @apply btn border border-base-line bg-base text-ink
+      hover:border-signal hover:text-signal active:scale-[0.98];
   }
+
   .card {
-    @apply rounded-xl border border-base-line bg-base-raised transition-colors duration-300;
+    @apply rounded-xl border border-base-line bg-base-raised
+      transition-all duration-300 hover:border-gray-300 hover:shadow-sm;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
